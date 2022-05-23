@@ -1,0 +1,14 @@
+<div class="background" [class.shown]="isToggled" (click)="isToggled = !isToggled">
+</div>
+<nav [class.toggled]="isToggled">
+    <md-list class="navigation">
+        <md-list-item *ngFor="let item of items">
+            <a class="nav-btn"
+               routerLinkActive="active"
+               routerLink={{item.url}}
+               (click)="isToggled = false">
+                {{item.title}}
+            </a>
+        </md-list-item>
+    </md-list>
+</nav>

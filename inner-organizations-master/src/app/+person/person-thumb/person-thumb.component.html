@@ -1,0 +1,12 @@
+<md-card>
+        <img src="../api/api.php?act=photo&manid={{person.manid}}" class="photo" />
+        <md-card-title>{{person.fullname}}</md-card-title>
+        <md-card-subtitle>ID пропуска: {{person.manid}}</md-card-subtitle>
+    <md-card-subtitle><a href="#/organization-detail/{{organization?.id}}">{{organization?.name}}</a></md-card-subtitle>
+        <md-card-subtitle>{{person.position}}</md-card-subtitle>
+
+    <div class="action float-right">
+        <md-icon color="primary" class="list-icon" (click)="personEditDialog()">edit</md-icon>
+        <md-icon color="primary" class="list-icon" (click)="personDeleteDialog()">delete</md-icon>
+    </div>
+</md-card>

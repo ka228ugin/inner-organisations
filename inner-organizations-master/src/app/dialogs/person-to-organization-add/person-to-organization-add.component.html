@@ -1,0 +1,33 @@
+<div class="person-add-form">
+    <h1>Привязка участника к организации</h1>
+    <form>
+
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="Введите Ф.И.О. сотрудника" [mdAutocomplete]="autoPersons" [formControl]="personCtrl" name="manid" minlength="4" maxlength="64" required>
+            </md-input-container>
+            <md-autocomplete #autoPersons="mdAutocomplete" [displayWith]="displayPersonFn" required="required">
+                <md-option *ngFor="let person of filteredPersons | async" [value]="person" (onSelectionChange)="setPersonId(person.manid)">
+                    {{ person.fullname }}
+                </md-option>
+            </md-autocomplete>
+
+        </div>
+
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput type="text" class="form-control form-field" [(ngModel)]="person.position" name="position" placeholder="Введите должность" required>
+            </md-input-container>
+        </div>
+
+        <div class="form-group hidden">
+            <md-input-container>
+                <input mdInput type="text" class="form-control form-field" [(ngModel)]="person.org_id" name="org_id" required>
+            </md-input-container>
+        </div>
+
+        <button md-raised-button type="submit" color="primary" (click)="closeDialog()" color="accent" class="float-right form-submit-button">Отмена</button>
+        <button md-raised-button type="submit" color="primary" (click)="addPerson()" color="accent" class="float-right form-submit-button">Добавить</button>
+
+    </form>
+</div>

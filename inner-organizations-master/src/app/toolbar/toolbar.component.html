@@ -1,0 +1,27 @@
+<md-toolbar color="primary">
+    <button md-icon-button
+            *ngIf="!arrow"
+            (click)="clickSidenav()">
+        <md-icon>menu</md-icon>
+    </button>
+    <button md-icon-button
+            *ngIf="showPrevButton"
+            (click)="showPrevButton = !showPrevButton"
+            routerLink="{{prevUrl}}">
+        <md-icon>keyboard_arrow_left</md-icon>
+    </button>
+    <p class="page-title">Внутренние организации</p>
+    <search></search>
+
+    <div class="toggle-group" *ngIf="toggleGroup">
+        <md-button-toggle-group [(ngModel)]="presentation" (change)="togglePresentation($event)">
+            <md-button-toggle value="card">
+                <md-icon>view_module</md-icon>
+            </md-button-toggle>
+            <md-button-toggle value="table">
+                <md-icon>view_list</md-icon>
+            </md-button-toggle>
+        </md-button-toggle-group>
+    </div>
+
+</md-toolbar>

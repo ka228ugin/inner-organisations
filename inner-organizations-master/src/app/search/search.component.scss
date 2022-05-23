@@ -1,0 +1,28 @@
+.absolute {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  height: 70%;
+  align-items: center;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  background-color: #fff;
+  border-radius: 4px;
+}
+form {
+  height: 100%;
+}
+.icon {
+  color: #000000;
+}
+.search {
+  margin-left: 10px;
+}
+.search-input {
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  padding: 0 10px;
+  outline: none;
+}

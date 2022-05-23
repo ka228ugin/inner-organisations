@@ -1,0 +1,59 @@
+.background {
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  &.shown {
+    display: block;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.54);
+    z-index: 1;
+  }
+}
+nav {
+  z-index: 1;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  margin-left: -320px;
+  background-color: #ffffff;
+  margin-top: 0;
+  transition: margin 0.3s ease-in-out;
+  &.toggled {
+    margin-left: 0;
+  }
+  .profile {
+    background-color: #00BCD4;
+    height: 160px;
+    padding: 32px;
+    .avatar {
+      width:100px;
+      height:100px;
+      border-radius: 50px;
+    }
+  }
+  .position {
+    display: block;
+    margin: 8px 0 8px 32px;
+  }
+}
+.name {
+  margin-top: 8px;
+}
+.nav-btn {
+  width: 100%;
+  text-align: left;
+}
+a {
+  color:#000;
+  text-decoration:none;
+}
+.active {
+  pointer-events: none;
+  font-weight: bold;
+}
+md-card-title {
+  font-size: inherit;
+  margin-bottom: 0;
+}

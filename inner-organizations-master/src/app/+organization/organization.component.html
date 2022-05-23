@@ -1,0 +1,9 @@
+<div class="container" *ngIf="presentation === 'card'">
+    <organization-thumb *ngFor="let organization of organizations" [organization]="organization" (deleteOrganizationEvent)="deleteOrganization($event)"></organization-thumb>
+</div>
+<div class="container" *ngIf="presentation === 'table'">
+    <md-card>
+        <organization-table *ngFor="let organization of organizations" [organization]="organization"></organization-table>
+    </md-card>
+</div>
+<button md-fab color="warn" class="button_add" (click)="organizationAddDialog()"><md-icon>add</md-icon></button>

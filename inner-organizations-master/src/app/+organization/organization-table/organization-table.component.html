@@ -1,0 +1,9 @@
+<div class="flex-container">
+    <div class="name">
+        <a [routerLink]=" ['./organization-detail'] ">{{organization.name}}</a>
+    </div>
+    <div class="action">
+        <md-icon color="primary" class="list-icon" (click)="organizationEditDialog()">edit</md-icon>
+        <md-icon color="primary" clss="list-icon" (click)="organizationDeleteDialog()">delete</md-icon>
+    </div>
+</div>

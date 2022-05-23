@@ -1,0 +1,23 @@
+<div class="organization-edit-form">
+    <h1>Изменение внутренней организации</h1>
+    <form>
+        <div class="form-group hidden">
+            <md-input-container>
+                <input mdInput type="text" [(ngModel)]="organization.id" name="id" placeholder="id" disabled>
+            </md-input-container>
+        </div>
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput type="text" class="form-control form-field" [(ngModel)]="organization.name" name="name" placeholder="Введите наименование организации" required>
+            </md-input-container>
+        </div>
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput type="text" class="form-control form-field" [(ngModel)]="organization.phone" name="phone" placeholder="Введите внутренний номер организации" required>
+            </md-input-container>
+        </div>
+        <input type="hidden" id="id" required>
+        <button md-raised-button color="primary" type="submit" md-dialog-close color="primary" class="float-right form-submit-button">Отмена</button>
+        <button md-raised-button color="primary" type="submit" (click)="closeDialog()" color="primary" class="float-right form-submit-button">Сохранить</button>
+    </form>
+</div>

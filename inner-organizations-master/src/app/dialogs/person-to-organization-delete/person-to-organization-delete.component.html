@@ -1,0 +1,14 @@
+<div class="person-delete-dialog">
+    <h3 md-header>Удаление участника</h3>
+    <p class="msg">Вы уверены, что хотите удалить этого участника?</p>
+    <div class="btn-container">
+        <button md-button
+                tabindex="-1"
+                md-dialog-close
+                class="btn btn-cancel">Отмена</button>
+        <button md-raised-button
+                tabindex="-1"
+                (click)="confirm()"
+                class="btn btn-apply">Подтвердить удаление</button>
+    </div>
+</div>

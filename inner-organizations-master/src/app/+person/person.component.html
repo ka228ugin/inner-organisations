@@ -1,0 +1,9 @@
+<div class="container" *ngIf="presentation === 'card'">
+    <person-thumb *ngFor="let person of persons" [person]="person" (deletePersonEvent)="deletePerson($event)"></person-thumb>
+</div>
+<div class="container" *ngIf="presentation === 'table'">
+    <md-card>
+        <person-table *ngFor="let person of persons" [person]="person"></person-table>
+    </md-card>
+</div>
+<button md-fab color="warn" class="button_add" (click)="personAddDialog()"><md-icon>add</md-icon></button>

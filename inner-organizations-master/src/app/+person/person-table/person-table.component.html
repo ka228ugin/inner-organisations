@@ -1,0 +1,18 @@
+<div class="flex-container">
+    <div class="photo">
+        <img src="../api/api.php?act=photo&manid={{person.manid}}" class="photo" />
+    </div>
+    <div class="name">
+        {{person.fullname}}
+    </div>
+    <div class="division">
+        <a href="#/organization-detail/{{organization?.id}}">{{organization?.name}}</a>
+    </div>
+    <div class="position">
+        {{person.position}}
+    </div>
+    <div class="action">
+        <md-icon color="primary" class="list-icon" (click)="personEditDialog()">edit</md-icon>
+        <md-icon color="primary" class="list-icon" (click)="personDeleteDialog()">delete</md-icon>
+    </div>
+</div>

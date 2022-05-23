@@ -1,0 +1,30 @@
+
+<div *ngIf="persons?.length > 0">
+
+    <div class="text-container">
+        <h1>{{organization.name}}: Список сотрудников</h1>
+        <p>Контактный телефон: {{organization.phone}}</p>
+    </div>
+
+    <!--<div class="container" *ngIf="presentation === 'card'">-->
+    <organization-detail-thumb *ngFor="let person of persons" (deletePersonEvent)="deletePerson($event)" [person]="person"></organization-detail-thumb>
+    <!--</div>-->
+    <!--<div class="container" *ngIf="presentation === 'table'">-->
+    <!--<md-card>-->
+    <!--<organization-detail-table *ngFor="let person of persons"></organization-detail-table>-->
+    <!--</md-card>-->
+    <!--</div>-->
+
+</div>
+
+<div *ngIf="persons?.length == 0">
+
+    <div class="text-container">
+        <h1>{{organization.name}}: Список сотрудников пуст</h1>
+        <p>К данной организации не добавлено ни одного сотрудника.</p>
+        <p>Для добавления сотрудника в организацию используйте кнопку &laquo;+&raquo; в правой нижней части экрана.</p>
+    </div>
+</div>
+
+
+<button md-fab color="warn" class="button_add" (click)="personToOrganizationAddDialog()"><mat-icon>add</mat-icon></button>

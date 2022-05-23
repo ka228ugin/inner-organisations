@@ -1,0 +1,15 @@
+<div>
+    <div class="absolute">
+        <md-icon class="icon search">search</md-icon>
+        <input mdInput (focus)="onSearchChange($event)"
+               (blur)="onSearchChange($event)"
+               (input)="onSearchChange($event)"
+               (keyup.enter)="onSearchChange($event)"
+               class="search-input"
+               type="text"
+               placeholder="Поиск по {{options}}">
+        <button md-icon-button (click)="onFilterClick()">
+            <md-icon class="icon">filter_list</md-icon>
+        </button>
+    </div>
+</div>

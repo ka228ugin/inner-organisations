@@ -1,0 +1,20 @@
+<h2>Выберите параметры поиска</h2>
+<md-dialog-actions>
+    <md-list>
+        <md-list-item *ngFor="let option of filterOptions">
+            <md-checkbox
+                    [(ngModel)]="option.check"
+                    (change)="checkIfAllUnchecked()">
+                {{option.name}}
+            </md-checkbox>
+        </md-list-item>
+    </md-list>
+    <div class="btn-container">
+        <button
+                md-raised-button
+                color="accent" (click)="onFilterClose()"
+                [disabled]="isAllUnchecked">
+            <md-icon>check</md-icon>
+        </button>
+    </div>
+</md-dialog-actions>

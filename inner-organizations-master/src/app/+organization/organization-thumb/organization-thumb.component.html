@@ -1,0 +1,8 @@
+<md-card>
+    <md-card-title><a href="#/organization-detail/{{organization.id}}" class="detail-link">{{organization.name}}</a></md-card-title>
+    <md-card-subtitle>Внутренний тел.: {{organization.phone}}</md-card-subtitle>
+    <div class="action float-right">
+        <md-icon class="list-icon" color="primary" (click)="organizationEditDialog()">edit</md-icon>
+        <md-icon clss="list-icon" color="primary" (click)="organizationDeleteDialog()">delete</md-icon>
+    </div>
+</md-card>
